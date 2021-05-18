@@ -10,22 +10,22 @@ let b2;
 function setup() {
     let p = createP("Velocity 1");
     p.position(500,0);
-    s_vel1 = createSlider(0, 5, 0);
+    s_vel1 = createSlider(0, 6, 0);
     s_vel1.position(500, 40);
     
     p = createP("Velocity 2");
     p.position(500, 50);
-    s_vel2 = createSlider(0, 5, 0);
+    s_vel2 = createSlider(0, 6, 0);
     s_vel2.position(500, 90);
 
     p = createP("Mass 1");
     p.position(500, 100);
-    s_m1 = createSlider(0, 10, 1);
+    s_m1 = createSlider(1, 10, 1);
     s_m1.position(500, 140);
 
     p = createP("Mass 2");
     p.position(500, 150);
-    s_m2 = createSlider(0, 10, 1);
+    s_m2 = createSlider(1, 10, 1);
     s_m2.position(500, 190);
 
     b_start = createButton("Start");
