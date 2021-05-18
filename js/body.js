@@ -41,7 +41,7 @@ class Body {
     }
 
     addForce(force) {
-        this.velocity.add(force.mult(1/this.mass));
+        this.velocity.add(force); // technically force / m but who cares
     }
 
     show() {
