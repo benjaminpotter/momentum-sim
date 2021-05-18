@@ -49,7 +49,7 @@ class Body {
         rect(this.position.x, this.position.y, size, size);
 
         fill(0);
-        text(this.mass, this.position.x, this.position.y);
+        text(this.mass+"m", this.position.x, this.position.y);
     }
 
     update() {

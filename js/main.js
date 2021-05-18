@@ -8,7 +8,6 @@ let b1;
 let b2;
 
 function setup() {
-    
     let p = createP("Velocity 1");
     p.position(500,0);
     s_vel1 = createSlider(0, 5, 0);
@@ -21,19 +20,19 @@ function setup() {
 
     p = createP("Mass 1");
     p.position(500, 100);
-    s_m1 = createSlider(0, 100, 1);
+    s_m1 = createSlider(0, 10, 1);
     s_m1.position(500, 140);
 
     p = createP("Mass 2");
     p.position(500, 150);
-    s_m2 = createSlider(0, 100, 1);
+    s_m2 = createSlider(0, 10, 1);
     s_m2.position(500, 190);
 
     b_start = createButton("Start");
     b_start.position(500, 220);
     b_start.mousePressed(() => {
         b1 = new Body(s_m1.value());
-        b2 = new Body(s_m1.value());
+        b2 = new Body(s_m2.value());
 
         b1.position = createVector(100, 300);
         b2.position = createVector(300, 300);
@@ -49,7 +48,6 @@ function setup() {
 }
 
 function wall(cx, cy, size, angle) {
-
     const sinA = sin(angle);
     const cosA = cos(angle);
     const offs = size / 2;
@@ -74,6 +72,9 @@ function scene() {
     // walls
     wall(25, 200, 400, PI/2);
     wall(375, 200, 400, -PI/2);
+
+    fill(0);
+    text("Ben Potter", 340, 390);
 }
 
 function draw() {
